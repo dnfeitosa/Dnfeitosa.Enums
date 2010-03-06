@@ -1,0 +1,7 @@
+*.resharper*
+*.suo
+*.vsmdi
+TestResults
+*/bin/*
+*/obj/*
+_ReSharper*
