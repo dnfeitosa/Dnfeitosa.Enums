@@ -6,6 +6,7 @@ namespace Dnfeitosa.Enums
     public abstract class Enum<T> : IEnum
         where T : IEnum
     {
+        // All required synchronization is done within registry.
         private static readonly Registry<T> Registry = new Registry<T>();
         private int _ordinal;
         private string _name;

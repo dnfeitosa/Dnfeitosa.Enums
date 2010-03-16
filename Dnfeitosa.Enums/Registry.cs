@@ -4,21 +4,35 @@ using System.Reflection;
 
 namespace Dnfeitosa.Enums
 {
+    /// <summary>
+    /// This class is, we hope, thread-safe.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     internal class Registry<T>
         where T : IEnum
     {
-        private bool _normalized;
         private readonly IList<IEnum> _instances = new List<IEnum>();
-        private readonly IDictionary<string, IEnum> _enums = new Dictionary<string, IEnum>();
+        private IDictionary<string, IEnum> _enums;
+
+        private bool Normalized
+        {
+            get { return _enums != null; }
+        }
 
         public void Add(IEnum @enum)
         {
-            _instances.Add(@enum);
+            lock (_instances)
+            {
+                _instances.Add(@enum);
+            }
         }
 
         public T ValueOf(string name)
         {
             Normalize();
+            // This check-then-act block is thread-safe because multiple executions of Normalize()
+            // will always recreate the same '_enums' list. And the call in the first line of the method
+            // guarantees that Normalize will be called at least once.
             if (!_enums.ContainsKey(name))
             {
                 throw new NoEnumConstException(typeof(T), name);
@@ -34,22 +48,32 @@ namespace Dnfeitosa.Enums
 
         internal void Normalize()
         {
-            if (_normalized)
+            if (Normalized)
             {
                 return;
             }
+
+            var localEnums = new Dictionary<string, IEnum>();
+
+            List<IEnum> copyOfInstances;
+            lock (_instances)
+            {
+                copyOfInstances = new List<IEnum>(_instances);
+            }
+
             var ordinal = 0;
             var fields = typeof (T).GetFields(BindingFlags.Public | BindingFlags.Static);
-
-            foreach (var instance in _instances)
+            
+            foreach (var instance in copyOfInstances)
             {
                 var @enum = ((Enum<T>)instance);
-                var field = fields.Where(f => f.GetValue(@enum).Equals(@enum)).First();
+                var field = fields.First(f => f.GetValue(@enum).Equals(@enum));
                 @enum.Name = field.Name;
                 @enum.Ordinal = ordinal++;
-                _enums.Add(field.Name, instance);
+                localEnums.Add(field.Name, instance);
             }
-            _normalized = true;
+
+            _enums = localEnums;
         }
     }
 }
