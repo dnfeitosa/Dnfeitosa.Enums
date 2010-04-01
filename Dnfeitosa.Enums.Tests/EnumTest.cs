@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using Dnfeitosa.Enums.Tests.Fixtures;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Dnfeitosa.Enums.Tests
@@ -6,12 +9,6 @@ namespace Dnfeitosa.Enums.Tests
     [TestClass]
     public class EnumTest
     {
-        sealed public class EnumFixture : Enum<EnumFixture>
-        {
-            public static readonly EnumFixture Value1 = new EnumFixture();
-            public static readonly EnumFixture Value2 = new EnumFixture();
-        }
-
         [TestMethod]
         public void ShouldReturnConstantNameAsString()
         {
@@ -55,5 +52,31 @@ namespace Dnfeitosa.Enums.Tests
         {
             Assert.AreEqual("Value1", EnumFixture.Value1.ToString());
         }
+
+        [TestMethod]
+        public void ShouldProperlyBeSerializableAndDeserializable()
+        {
+            var formatter = new BinaryFormatter();
+            using (var stream = GetStream())
+            {
+                formatter.Serialize(stream, EnumFixture.Value1);
+                stream.Close();
+            }
+
+            EnumFixture deserialized;
+            using (var stream = GetStream())
+            {
+                deserialized = (EnumFixture)formatter.Deserialize(stream);
+            }
+
+            Assert.AreEqual(EnumFixture.Value1, deserialized);
+        }
+
+        private FileStream GetStream()
+        {
+            var file = Path.GetTempPath() + "data.bin";
+            return new FileStream(file, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+        }
     }
+
 }
