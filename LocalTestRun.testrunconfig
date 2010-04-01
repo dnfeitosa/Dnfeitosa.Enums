@@ -3,7 +3,7 @@
   <Description>This is a default test run configuration for a local test run.</Description>
   <CodeCoverage enabled="true">
     <Regular>
-      <CodeCoverageItem binaryFile="Dnfeitosa.Core.Enums\bin\Debug\Dnfeitosa.Core.Enums.dll" pdbFile="Dnfeitosa.Core.Enums\bin\Debug\Dnfeitosa.Core.Enums.pdb" instrumentInPlace="true" />
+      <CodeCoverageItem binaryFile="Dnfeitosa.Enums\bin\Debug\Dnfeitosa.Enums.dll" pdbFile="Dnfeitosa.Enums\bin\Debug\Dnfeitosa.Enums.pdb" instrumentInPlace="true" />
     </Regular>
   </CodeCoverage>
   <TestTypeSpecific>
