@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="EnumTest.cs" />
     <Compile Include="Fixtures\EnumFixture.cs" />
+    <Compile Include="Fixtures\Language.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerializationTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dnfeitosa.Enums\Dnfeitosa.Enums.csproj">

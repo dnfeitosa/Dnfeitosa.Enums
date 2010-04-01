@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.Serialization;
+using Dnfeitosa.Enums.Serialization;
 
 namespace Dnfeitosa.Enums
 {
@@ -63,7 +63,7 @@ namespace Dnfeitosa.Enums
             if ((object)value1 == null || (object)value2 == null)
                 return false;
 
-            return value1.Name == value2.Name;
+            return value1._name == value2._name && value1._ordinal == value2._ordinal;
         }
         
         public static bool operator != (Enum<T> value1, Enum<T> value2)
@@ -76,24 +76,12 @@ namespace Dnfeitosa.Enums
             var enumName = info.GetValue("EnumName", typeof (string)) as string;
             var @enum = ValueOf(enumName);
 
-            foreach (var property in GetCustomProperties())
-            {
-                property.SetValue(this, property.GetValue(@enum, null), null);
-            }
+            new SerializationSupport().CopyProperties(@enum, this);
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("EnumName", Name);
-        }
-
-        private PropertyInfo[] GetCustomProperties()
-        {
-            var excludes = new[] {""};
-            return GetType()
-                .GetProperties()
-                .Where(prop => !excludes.Contains(prop.Name))
-                .ToArray();
         }
 
         public bool Equals(Enum<T> other)
