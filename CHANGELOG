@@ -1,5 +1,6 @@
 2010-04-02 v1.2.0
 	* Added support to xml serialization
+	* Added switch statement like support
 	* Internal changes
 ----------------------------------------
 2010-04-01 v1.1.0

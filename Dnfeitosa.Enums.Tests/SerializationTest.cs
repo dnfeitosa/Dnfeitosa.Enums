@@ -22,12 +22,12 @@ namespace Dnfeitosa.Enums.Tests
         [TestMethod]
         public void ShouldPreserveCustomPropertiesOfASerializedEnum()
         {
-            var language = SerializeAndDeserialize(Language.PtBr);
+            var language = SerializeAndDeserialize(Fixtures.Language.PtBr);
 
             Assert.IsNotNull(language.Country);
             Assert.IsNotNull(language.IetfTag);
-            Assert.AreEqual(Language.PtBr, language);
-            Assert.IsTrue(Language.PtBr == language);
+            Assert.AreEqual(Fixtures.Language.PtBr, language);
+            Assert.IsTrue(Fixtures.Language.PtBr == language);
        } 
 
         private T SerializeAndDeserialize<T>(T @enum)

@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
+using Dnfeitosa.Enums.Language;
 using Dnfeitosa.Enums.Serialization;
 
 namespace Dnfeitosa.Enums
@@ -57,6 +58,11 @@ namespace Dnfeitosa.Enums
         public static IEnumerable<T> Values()
         {
             return Registry.Values().Select(@enum => (T) @enum).ToList();
+        }
+
+        public static Switcher<T, TReturn> Switch<TReturn>()
+        {
+            return new Switcher<T, TReturn>();
         }
 
         public static bool operator == (Enum<T> value1, Enum<T> value2)
