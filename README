@@ -1,0 +1,53 @@
+= Dfeitosa.Enums
+
+* http://github.com/dnfeitosa/Dnfeitosa.Enums
+
+== AUTHOR
+
+  Diego Feitosa - dnfeitosa@gmail.com
+  
+  Special thanks to
+	* Rafael Ferreira (rafaeldff@gmail.com) - Thread safety issues
+	- Mozair 'MACSkeptic' Alves (http://github.com/MACSkeptic) - Switch statement implementation
+
+== DESCRIPTION:
+
+  Implementation of Enums that behaves almost like the Java ones.
+
+== FEATURES:
+  
+  * Binary and xml serialization support
+
+== USAGE:
+
+   = Simple enum
+   public class MyEnum : Enum<MyEnum>
+   {
+		public static readonly Value1 = new MyEnum();
+		public static readonly Value2 = new MyEnum();
+   }
+   
+   var name = MyEnum.Value1.Name; // "Value1" (string)
+   var ordinal = MyEnum.Value1.Name; // 0 (int)
+   
+   = Binary serialization
+   To allow serialization, just add the ISerializable attribute to the class and
+   the deserialization cosntructor. The rest is up to the library.
+   
+   [ISerializable]
+   public class MyEnum : Enum<MyEnum>
+   {
+		public static readonly Value1 = new MyEnum();
+		public static readonly Value2 = new MyEnum();
+		
+		protected MyEnum() {}
+		protected MyEnum(SerializationInfo info, StreamingContext context) 
+			: base(info, context) {}
+   }
+   
+== INSTALL:
+
+  Add a reference to Dnfeitosa.Enums.dll
+
+== LICENSE:
+	The MIT license. See LICENSE file.
