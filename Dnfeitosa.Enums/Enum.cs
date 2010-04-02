@@ -2,25 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
 using Dnfeitosa.Enums.Serialization;
 
 namespace Dnfeitosa.Enums
 {
     [Serializable]
-    public abstract class Enum<T> : IEnum, ISerializable
+    public abstract class Enum<T> : IEnum, ISerializable, IXmlSerializable
         where T : IEnum
     {
         // All required synchronization is done within registry.
         private static readonly Registry<T> Registry = new Registry<T>();
-        private int _ordinal;
+        private int? _ordinal;
         private string _name;
 
         public int Ordinal
         {
             get
             {
-                Registry.Normalize();
-                return _ordinal;
+                if (_ordinal == null)
+                    Registry.Normalize();
+                return _ordinal ?? -1;
             }
             internal set { _ordinal = value; }
         }
@@ -29,7 +33,8 @@ namespace Dnfeitosa.Enums
         {
             get
             {
-                Registry.Normalize();
+                if (_name == null)
+                    Registry.Normalize();
                 return _name;
             }
             internal set { _name = value; }
@@ -76,7 +81,7 @@ namespace Dnfeitosa.Enums
             var enumName = info.GetValue("EnumName", typeof (string)) as string;
             var @enum = ValueOf(enumName);
 
-            new SerializationSupport().CopyProperties(@enum, this);
+            new PropertiesCopier().Copy(@enum, this);
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)
@@ -103,8 +108,27 @@ namespace Dnfeitosa.Enums
         {
             unchecked
             {
-                return (_ordinal*397) ^ (_name != null ? _name.GetHashCode() : 0);
+                return ((_ordinal ?? 0) * 397) ^ (_name != null ? _name.GetHashCode() : 0);
             }
+        }
+
+        public XmlSchema GetSchema()
+        {
+            // See http://msdn.microsoft.com/en-us/library/system.xml.serialization.ixmlserializable.getschema.aspx for more info
+            return null;
+        }
+
+        public void ReadXml(XmlReader reader)
+        {
+            var content = reader.ReadElementContentAsString();
+            var @enum = ValueOf(content);
+
+            new PropertiesCopier().Copy(@enum, this);
+        }
+
+        public void WriteXml(XmlWriter writer)
+        {
+            writer.WriteValue(Name);
         }
     }
 }
