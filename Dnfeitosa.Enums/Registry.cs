@@ -11,7 +11,7 @@ namespace Dnfeitosa.Enums
     internal class Registry<T>
         where T : IEnum
     {
-        private readonly IList<IEnum> _instances = new List<IEnum>();
+        private IList<IEnum> _instances = new List<IEnum>();
         private IDictionary<string, IEnum> _enums;
 
         private bool Normalized
@@ -34,9 +34,8 @@ namespace Dnfeitosa.Enums
             // will always recreate the same '_enums' list. And the call in the first line of the method
             // guarantees that Normalize will be called at least once.
             if (!_enums.ContainsKey(name))
-            {
                 throw new NoEnumConstException(typeof(T), name);
-            }
+
             return (T) _enums[name];
         }
 
@@ -49,9 +48,7 @@ namespace Dnfeitosa.Enums
         internal void Normalize()
         {
             if (Normalized)
-            {
                 return;
-            }
 
             var localEnums = new Dictionary<string, IEnum>();
 
@@ -67,7 +64,10 @@ namespace Dnfeitosa.Enums
             foreach (var instance in copyOfInstances)
             {
                 var @enum = ((Enum<T>)instance);
-                var field = fields.First(f => f.GetValue(@enum).Equals(@enum));
+                var field = fields.FirstOrDefault(f => f.GetValue(@enum).Equals(@enum));
+                if (field == null)
+                    continue;
+
                 @enum.Name = field.Name;
                 @enum.Ordinal = ordinal++;
                 localEnums.Add(field.Name, instance);

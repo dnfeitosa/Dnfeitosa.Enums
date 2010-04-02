@@ -1,13 +1,12 @@
 using System.IO;
-using System.Xml.Serialization;
 
 namespace Dnfeitosa.Enums.Tests
 {
-    public class Converter
+    public class XmlSerializer
     {
-        public string Convert<T>(T @object)
+        public string Serialize<T>(T @object)
         {
-            var serializer = new XmlSerializer(typeof (T));
+            var serializer = new System.Xml.Serialization.XmlSerializer(typeof (T));
 
             var writer = new StringWriter();
             serializer.Serialize(writer, @object);
@@ -15,9 +14,9 @@ namespace Dnfeitosa.Enums.Tests
             return writer.ToString();
         }
 
-        public T Revert<T>(string value)
+        public T Deserialize<T>(string value)
         {
-            var serializer = new XmlSerializer(typeof (T));
+            var serializer = new System.Xml.Serialization.XmlSerializer(typeof (T));
             return (T) serializer.Deserialize(new StringReader(value));
         }
     }

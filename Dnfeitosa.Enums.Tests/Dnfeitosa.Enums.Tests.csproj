@@ -43,10 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Converter.cs" />
+    <Compile Include="XmlSerializer.cs" />
     <Compile Include="EnumTest.cs" />
     <Compile Include="Fixtures\EnumFixture.cs" />
     <Compile Include="Fixtures\Language.cs" />
+    <Compile Include="Fixtures\XmlFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerializationTest.cs" />
     <Compile Include="XmlSerializationTest.cs" />

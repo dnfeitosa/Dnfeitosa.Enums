@@ -1,5 +1,4 @@
-﻿using System.Xml.Serialization;
-using Dnfeitosa.Enums.Tests.Fixtures;
+﻿using Dnfeitosa.Enums.Tests.Fixtures;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Dnfeitosa.Enums.Tests
@@ -7,32 +6,44 @@ namespace Dnfeitosa.Enums.Tests
     [TestClass]
     public class XmlSerializationTest
     {
-        private Converter _converter;
+        private XmlSerializer _xmlSerializer;
 
         [TestInitialize]
         public void Setup()
         {
-            _converter = new Converter();
+            _xmlSerializer = new XmlSerializer();
         }
 
         [TestMethod]
-        public void ShouldProperlySerializeToXml()
+        public void ShouldProperlySerializeAnEnumToXml()
         {
-            var @object = new SomeObject {SomeEnumProperty = EnumFixture.Value2, SomeProperty = "Test"};
+            var @object = new XmlFixture
+                              {
+                                  SomeEnum = EnumFixture.Value2,
+                                  SomeValue = "Test"
+                              };
 
-            var @string = _converter.Convert(@object);
+            var @xml = _xmlSerializer.Serialize(@object);
 
-            var revert = _converter.Revert<SomeObject>(@string);
-
-            @string.GetType();
-            revert.GetType();
+            Assert.IsTrue(@xml.Contains("<SomeEnum>Value2</SomeEnum>"));
         }
-    }
 
-    [XmlRoot]
-    public class SomeObject
-    {
-        public EnumFixture SomeEnumProperty { get; set; }
-        public string SomeProperty { get; set; }
+        [TestMethod]
+        public void ShouldProperlyDeserializeAnEnumFromAXml()
+        {
+            const string xml = @"<?xml version='1.0' ?><XmlFixture><SomeEnum>Value1</SomeEnum><SomeValue>Test</SomeValue></XmlFixture>";
+            var @object = _xmlSerializer.Deserialize<XmlFixture>(xml);
+            _xmlSerializer.Deserialize<XmlFixture>(xml);
+            _xmlSerializer.Deserialize<XmlFixture>(xml);
+            _xmlSerializer.Deserialize<XmlFixture>(xml);
+            _xmlSerializer.Deserialize<XmlFixture>(xml);
+            _xmlSerializer.Deserialize<XmlFixture>(xml);
+            _xmlSerializer.Deserialize<XmlFixture>(xml);
+            _xmlSerializer.Deserialize<XmlFixture>(xml);
+            _xmlSerializer.Deserialize<XmlFixture>(xml);
+            _xmlSerializer.Deserialize<XmlFixture>(xml);
+
+            Assert.IsTrue(@object.SomeEnum == EnumFixture.Value1);
+        }
     }
 }
