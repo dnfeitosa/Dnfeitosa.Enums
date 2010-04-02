@@ -8,7 +8,7 @@
 
   Special thanks to
 	* Rafael Ferreira (rafaeldff@gmail.com) - Thread safety issues
-	- Mozair 'MACSkeptic' Alves (http://github.com/MACSkeptic) - Switch statement implementation
+	* Mozair 'MACSkeptic' Alves (http://github.com/MACSkeptic) - Switch statement implementation
 
 == DESCRIPTION:
 
@@ -19,8 +19,8 @@
    = Simple enum
    public class MyEnum : Enum<MyEnum>
    {
-		public static readonly Value1 = new MyEnum();
-		public static readonly Value2 = new MyEnum();
+      public static readonly Value1 = new MyEnum();
+      public static readonly Value2 = new MyEnum();
    }
 
    var name = MyEnum.Value1.Name; // "Value1" (string)
@@ -33,28 +33,28 @@
    [ISerializable]
    public class MyEnum : Enum<MyEnum>
    {
-		public static readonly Value1 = new MyEnum();
-		public static readonly Value2 = new MyEnum();
+      public static readonly Value1 = new MyEnum();
+      public static readonly Value2 = new MyEnum();
 
-		protected MyEnum() {}
-		protected MyEnum(SerializationInfo info, StreamingContext context) 
-			: base(info, context) {}
+      protected MyEnum() {}
+      protected MyEnum(SerializationInfo info, StreamingContext context) 
+         : base(info, context) {}
    }
 
    = Switch statement
    public class Language : Enum<Language>
    {
-		public static readonly Pt = new Language();
-		public static readonly En = new Language();
-		public static readonly Pl = new Language();
+      public static readonly Pt = new Language();
+      public static readonly En = new Language();
+      public static readonly Pl = new Language();
    }
 
    var result = Language.Switch<string>()
-        .When(Language.PtBr).Do(() => "Eu falo portugues")
-        .When(Language.En).Do(() => "I speak english")
-        .When(Language.Pl).Do(() => "Mowie polski")
-        .Default().Do(() => "Don't speak, please")
-        .ConsiderThisCase(Language.Pl);
+      .When(Language.PtBr).Do(() => "Eu falo portugues")
+      .When(Language.En).Do(() => "I speak english")
+      .When(Language.Pl).Do(() => "Mowie polski")
+      .Default().Do(() => "Don't speak, please")
+      .ConsiderThisCase(Language.Pl);
 
    Console.WriteLine(result); // "Mowie polski"
 
