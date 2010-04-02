@@ -11,20 +11,11 @@ namespace Dnfeitosa.Enums
     internal class Registry<T>
         where T : IEnum
     {
-        private IList<IEnum> _instances = new List<IEnum>();
         private IDictionary<string, IEnum> _enums;
 
         private bool Normalized
         {
             get { return _enums != null; }
-        }
-
-        public void Add(IEnum @enum)
-        {
-            lock (_instances)
-            {
-                _instances.Add(@enum);
-            }
         }
 
         public T ValueOf(string name)
@@ -52,25 +43,19 @@ namespace Dnfeitosa.Enums
 
             var localEnums = new Dictionary<string, IEnum>();
 
-            List<IEnum> copyOfInstances;
-            lock (_instances)
-            {
-                copyOfInstances = new List<IEnum>(_instances);
-            }
-
             var ordinal = 0;
             var fields = typeof (T).GetFields(BindingFlags.Public | BindingFlags.Static);
-            
-            foreach (var instance in copyOfInstances)
+
+            foreach (var fieldInfo in fields)
             {
-                var @enum = ((Enum<T>)instance);
-                var field = fields.FirstOrDefault(f => f.GetValue(@enum).Equals(@enum));
-                if (field == null)
+                var value = fieldInfo.GetValue(this);
+                if (!(value is Enum<T>))
                     continue;
 
-                @enum.Name = field.Name;
-                @enum.Ordinal = ordinal++;
-                localEnums.Add(field.Name, instance);
+                var instance = (Enum<T>) value;
+                instance.Name = fieldInfo.Name;
+                instance.Ordinal = ordinal++;
+                localEnums.Add(fieldInfo.Name, instance);
             }
 
             _enums = localEnums;

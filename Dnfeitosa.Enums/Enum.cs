@@ -42,7 +42,6 @@ namespace Dnfeitosa.Enums
 
         protected Enum()
         {
-            Registry.Add(this);
         }
 
         public override string ToString()
@@ -112,9 +111,12 @@ namespace Dnfeitosa.Enums
             }
         }
 
+        /// <summary>
+        /// See http://msdn.microsoft.com/en-us/library/system.xml.serialization.ixmlserializable.getschema.aspx for more info
+        /// </summary>
+        /// <returns></returns>
         public XmlSchema GetSchema()
         {
-            // See http://msdn.microsoft.com/en-us/library/system.xml.serialization.ixmlserializable.getschema.aspx for more info
             return null;
         }
 
