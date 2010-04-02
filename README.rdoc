@@ -2,7 +2,7 @@
 
 * http://github.com/dnfeitosa/Dnfeitosa.Enums
 
-== AUTHOR
+== AUTHOR:
 
   Diego Feitosa - dnfeitosa@gmail.com
 
@@ -17,7 +17,6 @@
 == USAGE:
 
    = Simple enum
-
    public class MyEnum : Enum<MyEnum>
    {
 		public static readonly Value1 = new MyEnum();
