@@ -30,11 +30,11 @@
    To allow serialization, just add the ISerializable attribute on class and
    the deserialization constructor. The rest is up to the library.
 
-   [ISerializable]
+   [Serializable]
    public class MyEnum : Enum<MyEnum>
    {
-      public static readonly Value1 = new MyEnum();
-      public static readonly Value2 = new MyEnum();
+      public static readonly MyEnum Value1 = new MyEnum();
+      public static readonly MyEnum Value2 = new MyEnum();
 
       protected MyEnum() {}
       protected MyEnum(SerializationInfo info, StreamingContext context) 
@@ -44,13 +44,13 @@
    = Switch statement
    public class Language : Enum<Language>
    {
-      public static readonly Pt = new Language();
-      public static readonly En = new Language();
-      public static readonly Pl = new Language();
+      public static readonly Language Pt = new Language();
+      public static readonly Language En = new Language();
+      public static readonly Language Pl = new Language();
    }
 
    var result = Language.Switch<string>()
-      .When(Language.PtBr).Do(() => "Eu falo portugues")
+      .When(Language.Pt).Do(() => "Eu falo portugues")
       .When(Language.En).Do(() => "I speak english")
       .When(Language.Pl).Do(() => "Mowie polski")
       .Default().Do(() => "Don't speak, please")
