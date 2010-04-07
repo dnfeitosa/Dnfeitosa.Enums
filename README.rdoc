@@ -24,7 +24,8 @@
    }
 
    var name = MyEnum.Value1.Name; // "Value1" (string)
-   var ordinal = MyEnum.Value1.Name; // 0 (int)
+   var ordinal = MyEnum.Value1.Ordinal; // 0 (int)
+   var other = MyEnum.Value2.Ordinal; // 1 (int)
 
    = Binary serialization
    To allow serialization, just add the ISerializable attribute on class and
