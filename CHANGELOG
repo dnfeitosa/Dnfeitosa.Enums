@@ -1,3 +1,6 @@
+2010-04-16 v1.3.0
+	* Added proxy support
+----------------------------------------
 2010-04-02 v1.2.0
 	* Added support to xml serialization
 	* Added switch statement like support
