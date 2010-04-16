@@ -10,8 +10,8 @@ namespace Dnfeitosa.Enums.Tests.Fixtures
         public static readonly Language Pl = new Language("pl", "Poland");
         public static readonly Language PtBr = new Language("pt-BR", "Brazil");
 
-        public string IetfTag { get; private set; }
-        public string Country { get; private set; }
+        public virtual string IetfTag { get; private set; }
+        public virtual string Country { get; private set; }
 
         private Language(string ietf, string country)
         {

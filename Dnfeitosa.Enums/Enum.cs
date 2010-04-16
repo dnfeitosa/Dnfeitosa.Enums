@@ -19,7 +19,7 @@ namespace Dnfeitosa.Enums
         private int? _ordinal;
         private string _name;
 
-        public int Ordinal
+        public virtual int Ordinal
         {
             get
             {
@@ -30,7 +30,7 @@ namespace Dnfeitosa.Enums
             internal set { _ordinal = value; }
         }
 
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -83,13 +83,16 @@ namespace Dnfeitosa.Enums
 
         protected Enum(SerializationInfo info, StreamingContext context)
         {
+            if (info == null)
+                return;
+
             var enumName = info.GetValue("EnumName", typeof (string)) as string;
             var @enum = ValueOf(enumName);
 
             new PropertiesCopier().Copy(@enum, this);
         }
 
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("EnumName", Name);
         }
