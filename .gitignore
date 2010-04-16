@@ -5,3 +5,6 @@ TestResults
 */bin/*
 */obj/*
 _ReSharper*
+ivy-*
+Libraries
+*.cache
