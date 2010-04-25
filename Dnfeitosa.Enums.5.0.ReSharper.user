@@ -1,0 +1,460 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:LICENSE/l:E!?Work?csharp?Dnfeitosa.Enums?LICENSE" caret="0" fromTop="0" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/d:Language/f:Case.cs" caret="115" fromTop="6" />
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:CHANGELOG/l:E!?Work?csharp?Dnfeitosa.Enums?CHANGELOG" caret="96" fromTop="2" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/d:Language/f:Switcher.cs" caret="717" fromTop="17" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/f:SerializationTest.cs" caret="930" fromTop="9" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Fixtures/f:Language.cs" caret="0" fromTop="0" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Language/f:SwitcherTest.cs" caret="657" fromTop="19" />
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:README.rdoc/l:E!?Work?csharp?Dnfeitosa.Enums?README.rdoc" caret="65" fromTop="4" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/d:Properties/f:AssemblyInfo.cs" caret="1398" fromTop="34" />
+      <File id="30724B03-5294-4279-8BF5-76C064227298/f:LocalTestRun.testrunconfig/l:E!?Work?csharp?Dnfeitosa.Enums?LocalTestRun.testrunconfig" caret="0" fromTop="0" />
+      <File id="30724B03-5294-4279-8BF5-76C064227298/f:Dnfeitosa.Enums.vsmdi/l:E!?Work?csharp?Dnfeitosa.Enums?Dnfeitosa.Enums.vsmdi" caret="0" fromTop="0" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/f:IEnum.cs" caret="107" fromTop="4" />
+      <File id="d:Miscellaneous Files/f:ModelMetadataProvider.cs/l:C!?Users?Diego?AppData?Local?Red Gate?.NET Reflector 6?Cache?V2?x86?CS?V35?a13973f8-d742-490e-800c-b7d0774028fb?System?Web?Mvc?ModelMetadataProvider.cs" caret="231" fromTop="5" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Fixtures/f:EnumFixture.cs" caret="0" fromTop="0" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinderTest.cs" caret="1566" fromTop="26" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/f:Registry.cs" caret="476" fromTop="6" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinder.cs" caret="1102" fromTop="15" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/f:Enum.cs" caret="2830" fromTop="14" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/f:XmlSerializationTest.cs" caret="768" fromTop="21" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/f:EnumTest.cs" caret="1864" fromTop="27" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:README.rdoc/l:E!?Work?csharp?Dnfeitosa.Enums?README.rdoc" caret="1762" fromTop="35" />
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:README.rdoc/l:E!?Work?csharp?Dnfeitosa.Enums?README.rdoc" caret="1698" fromTop="30" />
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:README.rdoc/l:E!?Work?csharp?Dnfeitosa.Enums?README.rdoc" caret="75" fromTop="4" />
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:README.rdoc/l:E!?Work?csharp?Dnfeitosa.Enums?README.rdoc" caret="202" fromTop="10" />
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:README.rdoc/l:E!?Work?csharp?Dnfeitosa.Enums?README.rdoc" caret="508" fromTop="22" />
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:README.rdoc/l:E!?Work?csharp?Dnfeitosa.Enums?README.rdoc" caret="897" fromTop="27" />
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:README.rdoc/l:E!?Work?csharp?Dnfeitosa.Enums?README.rdoc" caret="903" fromTop="27" />
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:README.rdoc/l:E!?Work?csharp?Dnfeitosa.Enums?README.rdoc" caret="1319" fromTop="34" />
+      <File id="1620E8D9-3D10-400E-BC62-3FF92C16C034/f:README.rdoc/l:E!?Work?csharp?Dnfeitosa.Enums?README.rdoc" caret="1662" fromTop="34" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/d:Properties/f:AssemblyInfo.cs" caret="1506" fromTop="36" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/f:IEnum.cs" caret="107" fromTop="4" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinder.cs" caret="145" fromTop="3" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinderTest.cs" caret="1830" fromTop="22" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinderTest.cs" caret="367" fromTop="10" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinderTest.cs" caret="1046" fromTop="20" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinderTest.cs" caret="1224" fromTop="19" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinderTest.cs" caret="1392" fromTop="23" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinderTest.cs" caret="955" fromTop="23" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinderTest.cs" caret="856" fromTop="23" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinder.cs" caret="151" fromTop="13" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinder.cs" caret="0" fromTop="0" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinder.cs" caret="151" fromTop="5" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinder.cs" caret="1448" fromTop="34" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/d:Frameworks/d:ASP.NET/d:MVC/d:Binding/f:EnumModelBinderTest.cs" caret="1596" fromTop="27" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/f:Enum.cs" caret="2768" fromTop="22" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/f:EnumTest.cs" caret="1773" fromTop="30" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/f:Enum.cs" caret="2694" fromTop="10" />
+      <File id="08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478/f:Enum.cs" caret="2609" fromTop="6" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/f:EnumTest.cs" caret="0" fromTop="0" />
+      <File id="71860709-D6A1-44DB-86FE-BE7F2BF5A5AC/f:EnumTest.cs" caret="1864" fromTop="27" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="info" priority="7" />
+      <Item value="Registry" priority="4" />
+      <Item value="typeof" priority="5" />
+      <Item value="T" priority="9" />
+      <Item value="public" priority="28" />
+      <Item value="void" priority="13" />
+      <Item value="TestMethod" priority="9" />
+      <Item value="protected" priority="9" />
+      <Item value="Enum" priority="14" />
+      <Item value="SerializationInfo" priority="8" />
+      <Item value="StreamingContext" priority="10" />
+      <Item value="context" priority="9" />
+      <Item value="new" priority="38" />
+      <Item value="BinaryFormatter" priority="0" />
+      <Item value="formatter" priority="3" />
+      <Item value="EnumFixture" priority="15" />
+      <Item value="null" priority="13" />
+      <Item value="Serializable" priority="1" />
+      <Item value="stream" priority="9" />
+      <Item value="obj" priority="0" />
+      <Item value="checked" priority="1" />
+      <Item value="FileMode" priority="0" />
+      <Item value="FieldAccessException" priority="0" />
+      <Item value="FileAccess" priority="0" />
+      <Item value="deserialize" priority="1" />
+      <Item value="bool" priority="0" />
+      <Item value="operator" priority="2" />
+      <Item value="return" priority="14" />
+      <Item value="false" priority="2" />
+      <Item value="static" priority="5" />
+      <Item value="Type" priority="0" />
+      <Item value="other" priority="0" />
+      <Item value="@this" priority="0" />
+      <Item value="value2" priority="3" />
+      <Item value="if" priority="14" />
+      <Item value="true" priority="2" />
+      <Item value="IFormattable" priority="0" />
+      <Item value="value1" priority="5" />
+      <Item value="is" priority="1" />
+      <Item value="Nullable" priority="1" />
+      <Item value="string" priority="8" />
+      <Item value="default" priority="2" />
+      <Item value="GetType" priority="1" />
+      <Item value="property" priority="4" />
+      <Item value="this" priority="4" />
+      <Item value="var" priority="4" />
+      <Item value="excludes" priority="1" />
+      <Item value="Contains" priority="1" />
+      <Item value="continue" priority="3" />
+      <Item value="private" priority="2" />
+      <Item value="PropertyAttributes" priority="0" />
+      <Item value="prop" priority="3" />
+      <Item value="GetCustomProperties" priority="1" />
+      <Item value="ctor" priority="2" />
+      <Item value="class" priority="3" />
+      <Item value="ISerializable" priority="1" />
+      <Item value="Foo" priority="1" />
+      <Item value="Bar" priority="6" />
+      <Item value="base" priority="2" />
+      <Item value="System" priority="1" />
+      <Item value="Environment" priority="2" />
+      <Item value="IO" priority="0" />
+      <Item value="Path" priority="1" />
+      <Item value="using" priority="1" />
+      <Item value="GetStream" priority="1" />
+      <Item value="ValueType" priority="0" />
+      <Item value="enumName" priority="5" />
+      <Item value="as" priority="0" />
+      <Item value="@enum" priority="5" />
+      <Item value="ctzx" priority="0" />
+      <Item value="assembly" priority="1" />
+      <Item value="from" priority="1" />
+      <Item value="to" priority="0" />
+      <Item value="throw" priority="0" />
+      <Item value="Language" priority="8" />
+      <Item value="readonly" priority="1" />
+      <Item value="TestClass" priority="2" />
+      <Item value="Assert" priority="4" />
+      <Item value="deserialized" priority="1" />
+      <Item value="SerializeAndDeserialize" priority="1" />
+      <Item value="language" priority="4" />
+      <Item value="fixture" priority="0" />
+      <Item value="InternalsVisibleTo" priority="0" />
+      <Item value="Tests" priority="0" />
+      <Item value="RawEnum" priority="2" />
+      <Item value="int" priority="0" />
+      <Item value="Property1" priority="0" />
+      <Item value="Property2" priority="0" />
+      <Item value="dest" priority="0" />
+      <Item value="BindingFlags" priority="0" />
+      <Item value="PrivateType" priority="1" />
+      <Item value="serializer" priority="1" />
+      <Item value="TextWriter" priority="2" />
+      <Item value="StringWriter" priority="0" />
+      <Item value="MemoryStream" priority="0" />
+      <Item value="writer" priority="4" />
+      <Item value="@object" priority="1" />
+      <Item value="Converter" priority="1" />
+      <Item value="XmlRoot" priority="0" />
+      <Item value="SomeObject" priority="1" />
+      <Item value="SomeProperty" priority="0" />
+      <Item value="TestInitialize" priority="1" />
+      <Item value="@string" priority="0" />
+      <Item value="reader" priority="3" />
+      <Item value="Name" priority="2" />
+      <Item value="content" priority="1" />
+      <Item value="XmlSerializer" priority="0" />
+      <Item value="StringReader" priority="0" />
+      <Item value="_converter" priority="1" />
+      <Item value="revert" priority="0" />
+      <Item value="ValueOf" priority="0" />
+      <Item value="SerializationSupport" priority="0" />
+      <Item value="_ordinal" priority="1" />
+      <Item value="_name" priority="0" />
+      <Item value="XmlEnum" priority="0" />
+      <Item value="Linq" priority="0" />
+      <Item value="Where" priority="0" />
+      <Item value="XmlFixture" priority="4" />
+      <Item value="xml" priority="1" />
+      <Item value="field" priority="1" />
+      <Item value="Normalized" priority="1" />
+      <Item value="_instances" priority="1" />
+      <Item value="foreach" priority="0" />
+      <Item value="fieldInfo" priority="2" />
+      <Item value="instance" priority="3" />
+      <Item value="ordinal" priority="0" />
+      <Item value="localEnums" priority="0" />
+      <Item value="value" priority="2" />
+      <Item value="_xmlSerializer" priority="1" />
+      <Item value="SomeValue" priority="0" />
+      <Item value="xmlFixture" priority="0" />
+      <Item value="XmlElement" priority="0" />
+      <Item value="XPathNavigator" priority="0" />
+      <Item value="TReturn" priority="1" />
+      <Item value="Switcher&lt;T,TReturn&gt;" priority="0" />
+      <Item value="Case" priority="0" />
+      <Item value="Switcher" priority="0" />
+      <Item value="bindingContext" priority="6" />
+      <Item value="EnumModelBinderTest`0" priority="1" />
+      <Item value="binder" priority="0" />
+      <Item value="Assert`0" priority="3" />
+      <Item value="EnumFixture`0" priority="1" />
+      <Item value="model" priority="0" />
+      <Item value="MockBehavior`0" priority="0" />
+      <Item value="_factory" priority="2" />
+      <Item value="ControllerContext`0" priority="0" />
+      <Item value="ctx" priority="0" />
+      <Item value="contextBase" priority="1" />
+      <Item value="ctxBase" priority="0" />
+      <Item value="requestBase" priority="0" />
+      <Item value="req" priority="0" />
+      <Item value="AjaxRequestExtensions`0" priority="0" />
+      <Item value="ModelMetadata`0" priority="0" />
+      <Item value="ModelMetadata" priority="0" />
+      <Item value="ModelMetadataProvider`0" priority="0" />
+      <Item value="DataAnnotationsModelMetadataProvider`0" priority="0" />
+      <Item value="Binding" priority="0" />
+      <Item value="Static" priority="0" />
+      <Item value="BindingFlags`0" priority="1" />
+      <Item value="f" priority="0" />
+      <Item value="Controller`0" priority="0" />
+      <Item value="controllerContext" priority="0" />
+      <Item value="enum" priority="0" />
+      <Item value="ModelBinderDictionary`0" priority="0" />
+      <Item value="binderDictionary" priority="0" />
+      <Item value="T`0" priority="0" />
+      <Item value="Action`0" priority="0" />
+      <Item value="predicate" priority="1" />
+      <Item value="Values`0" priority="0" />
+      <Item value="Language`0" priority="0" />
+      <Item value="l" priority="2" />
+      <Item value="Action" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Serialization.SerializationInfo">
+      <Item value="AddValue" priority="3" />
+      <Item value="GetValue" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter">
+      <Item value="Serialize" priority="1" />
+      <Item value="Deserialize" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Dnfeitosa.Enums.Tests.EnumTest+EnumFixture">
+      <Item value="Value1" priority="0" />
+      <Item value="Value2" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileMode">
+      <Item value="OpenOrCreate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileAccess">
+      <Item value="ReadWrite" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="Close" priority="1" />
+      <Item value="Flush" priority="0" />
+      <Item value="EndWrite" priority="0" />
+      <Item value="Position" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Enum`1">
+      <Item value="_name" priority="1" />
+      <Item value="Ordinal" priority="3" />
+      <Item value="Name" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Serialization.StreamingContext">
+      <Item value="Context" priority="0" />
+      <Item value="State" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="GetProperties" priority="2" />
+      <Item value="GetProperties`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.PropertyInfo">
+      <Item value="SetValue" priority="0" />
+      <Item value="Name" priority="5" />
+      <Item value="PropertyType" priority="0" />
+      <Item value="GetValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToArray" priority="0" />
+      <Item value="First`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="AreEqual" priority="3" />
+      <Item value="IsNotNull" priority="2" />
+      <Item value="IsTrue" priority="2" />
+      <Item value="IsNotNull`0" priority="0" />
+      <Item value="IsInstanceOfType`0" priority="0" />
+      <Item value="AreEqual`0" priority="0" />
+      <Item value="AreSame`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Dnfeitosa.Enums.Tests.Fixtures.EnumFixture">
+      <Item value="Value1" priority="4" />
+      <Item value="Value2" priority="0" />
+      <Item value="Switch" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="GetFolderPath" priority="0" />
+      <Item value="GetEnvironmentVariable" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="GetTempPath" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.IEnum">
+      <Item value="GetType" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Tests.Fixtures.EnumFixture">
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Dnfeitosa.Enums.Tests.Fixtures.Language">
+      <Item value="PtBr" priority="2" />
+      <Item value="Where`0" priority="0" />
+      <Item value="Pl" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Tests.Fixtures.Language">
+      <Item value="Country" priority="0" />
+      <Item value="Ietf" priority="0" />
+      <Item value="IetfTag" priority="1" />
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Serialization.SerializationSupport">
+      <Item value="CopyProperties" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Tests.Fixtures.RawEnum">
+      <Item value="Property1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.Serialization.XmlSerializer">
+      <Item value="Serialize" priority="0" />
+      <Item value="Deserialize" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StringWriter">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Tests.Converter">
+      <Item value="Convert" priority="0" />
+      <Item value="Revert" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="GetType" priority="2" />
+      <Item value="ToUpper" priority="0" />
+      <Item value="Contains" priority="0" />
+      <Item value="Trim`0" priority="0" />
+      <Item value="ToUpper`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlWriter">
+      <Item value="WriteElementString" priority="0" />
+      <Item value="WriteValue" priority="0" />
+      <Item value="WriteAttributeString" priority="0" />
+      <Item value="Settings" priority="2" />
+      <Item value="XmlSpace" priority="0" />
+      <Item value="WriteNode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlReader">
+      <Item value="ReadContentAsString" priority="1" />
+      <Item value="MoveToContent" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Tests.SomeObject">
+      <Item value="GetType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlNodeType">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="HasValue" priority="0" />
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:T">
+      <Item value="Name" priority="0" />
+      <Item value="Ordinal" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Tests.Fixtures.XmlFixture">
+      <Item value="SomeValue" priority="0" />
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Contains" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.FieldInfo">
+      <Item value="GetValue" priority="0" />
+      <Item value="Name" priority="1" />
+      <Item value="GetValue`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Tests.XmlSerializer">
+      <Item value="Serialize" priority="0" />
+      <Item value="Deserialize" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Language.Switcher`2">
+      <Item value="When" priority="1" />
+      <Item value="ConsiderThisCase" priority="1" />
+      <Item value="Default" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Language.Case`2">
+      <Item value="Owner" priority="0" />
+      <Item value="Do" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ModelBindingContext">
+      <Item value="ModelName" priority="2" />
+      <Item value="ModelType" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Binding.EnumModelBinder">
+      <Item value="BindModel`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Moq.MockBehavior">
+      <Item value="Strict" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Moq.MockFactory">
+      <Item value="Create`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Moq.Mock`1">
+      <Item value="Setup`0" priority="2" />
+      <Item value="Object" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ControllerContext">
+      <Item value="HttpContext" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Moq.Language.Flow.ISetupGetter`2">
+      <Item value="Returns`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpContextBase">
+      <Item value="Request" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Moq.Language.Flow.ISetup`2">
+      <Item value="Returns`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.BindingFlags">
+      <Item value="Public" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Action`2">
+      <Item value="Invoke`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Where`1" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
