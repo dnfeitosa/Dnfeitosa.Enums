@@ -59,6 +59,18 @@
 
    Console.WriteLine(result); // "Mowie polski"
 
+	= ASP.NET MVC Model Binding
+	To enable model binding within ASP.NET MVC applications, add the following lines
+  into the Global.asax.cs file:
+
+	protected void Application_Start()
+	{
+			new EnumModelBinder(ModelBinders.Binders);
+	}
+
+	= Enum retrieval by custom property
+	Language.Where(lang => lang.IetfTag == "Pl"); // Language.Pl
+
 == INSTALL:
 
   Add a reference to Dnfeitosa.Enums.dll
