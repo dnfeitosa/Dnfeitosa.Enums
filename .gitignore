@@ -4,7 +4,7 @@
 TestResults
 */bin/*
 */obj/*
-_ReSharper*
+*ReSharper*
 ivy-*
 Libraries
 *.cache
