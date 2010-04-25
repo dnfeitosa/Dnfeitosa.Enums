@@ -41,9 +41,14 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frameworks\ASP.NET\MVC\Binding\EnumModelBinderTest.cs" />
     <Compile Include="Language\SwitcherTest.cs" />
     <Compile Include="MockableTest.cs" />
     <Compile Include="XmlSerializer.cs" />
