@@ -92,6 +92,16 @@ namespace Dnfeitosa.Enums
             new PropertiesCopier().Copy(@enum, this);
         }
 
+        public static T Where(Func<T, bool> predicate)
+        {
+            foreach (var value in Values())
+            {
+                if (predicate.Invoke(value))
+                    return value;
+            }
+            return default(T);
+        }
+
         public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("EnumName", Name);

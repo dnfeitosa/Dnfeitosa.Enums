@@ -50,5 +50,12 @@ namespace Dnfeitosa.Enums.Tests
         {
             Assert.AreEqual("Value1", EnumFixture.Value1.ToString());
         }
+
+        [TestMethod]
+        public void ShouldReturnAnEnumByACustomProperty()
+        {
+            var language = Fixtures.Language.Where(l => l.IetfTag == "pl");
+            Assert.AreEqual(Fixtures.Language.Pl, language);
+        }
     }
 }
