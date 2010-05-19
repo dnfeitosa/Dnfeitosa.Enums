@@ -10,6 +10,7 @@ namespace Dnfeitosa.Enums.Language
     /// <typeparam name="T"></typeparam>
     /// <typeparam name="TReturn"></typeparam>
     public class Switcher<T, TReturn>
+        where T : IEnum
     {
         public Switcher()
         {
@@ -34,7 +35,7 @@ namespace Dnfeitosa.Enums.Language
 
         public TReturn ConsiderThisCase(T target)
         {
-            var cases = Cases.Where(c => c.Value.Equals(target));
+            var cases = Cases.Where(c => (IEnum)c.Value == (IEnum)target);
             return cases.Count() > 0
                        ? cases.First().Action.Invoke()
                        : DefaultCase.Action.Invoke();

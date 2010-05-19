@@ -3,6 +3,7 @@ using System;
 namespace Dnfeitosa.Enums.Language
 {
     public class Case<T, TReturn>
+        where T : IEnum
     {
         internal Switcher<T, TReturn> Owner { get; set; }
         internal T Value { get; set; }

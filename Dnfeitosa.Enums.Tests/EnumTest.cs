@@ -79,5 +79,27 @@ namespace Dnfeitosa.Enums.Tests
             Assert.IsTrue(dictionary.ContainsKey(EnumFixture.Value2));
             Assert.IsFalse(dictionary.ContainsKey(EnumFixture.Value3));
         }
+
+        [TestMethod]
+        public void ShouldSwitchBetweenValues()
+        {
+            const string expected = "works!";
+
+            var result = EnumFixture.Switch<string>()
+                .When(EnumFixture.Value1).Do(() =>
+                                                 {
+                                                     Assert.Fail("Should not pass here!");
+                                                     return "error!";
+                                                 })
+                .When(EnumFixture.Value2).Do(() =>
+                                                 {
+                                                     Assert.Fail("Should not pass here!");
+                                                     return "error!";
+                                                 })
+                .When(EnumFixture.Value3).Do(() => expected)
+                .ConsiderThisCase(EnumFixture.Value3);
+
+            Assert.AreEqual(expected, result);
+        }
     }
 }
