@@ -73,7 +73,7 @@ namespace Dnfeitosa.Enums
             if ((object)value1 == null || (object)value2 == null)
                 return false;
 
-            return value1._name == value2._name && value1._ordinal == value2._ordinal;
+            return value1.Name == value2.Name && value1.Ordinal == value2.Ordinal;
         }
         
         public static bool operator != (Enum<T> value1, Enum<T> value2)

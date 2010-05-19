@@ -8,6 +8,7 @@ namespace Dnfeitosa.Enums.Tests.Fixtures
     {
         public static readonly EnumFixture Value1 = new EnumFixture();
         public static readonly EnumFixture Value2 = new EnumFixture();
+        public static readonly EnumFixture Value3 = new EnumFixture();
 
         protected EnumFixture()
         {

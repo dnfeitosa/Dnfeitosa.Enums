@@ -1,3 +1,6 @@
+2010-05-19 v1.4.1
+	* Fixed equality comparison (also fixes dictionary detection)
+----------------------------------------
 2010-04-25 v1.4.0
 	* Added enum retrieval by custom property
 	* Added ASP.NET MVC model binder

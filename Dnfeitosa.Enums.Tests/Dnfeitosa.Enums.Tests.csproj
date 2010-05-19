@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fixtures\AnotherFixture.cs" />
     <Compile Include="Frameworks\ASP.NET\MVC\Binding\EnumModelBinderTest.cs" />
     <Compile Include="Language\SwitcherTest.cs" />
     <Compile Include="MockableTest.cs" />
