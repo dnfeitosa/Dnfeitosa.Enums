@@ -22,7 +22,7 @@ namespace Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Binding
             if (!IsEnumType(bindingContext.ModelType))
                 return _defaultBinder.BindModel(controllerContext, bindingContext);
 
-            var enumName = controllerContext.HttpContext.Request[bindingContext.ModelName];
+            var enumName = bindingContext.ValueProvider[bindingContext.ModelName].AttemptedValue;
             if (enumName == null || enumName.Trim() == "")
                 return null;
 
