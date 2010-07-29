@@ -111,7 +111,7 @@ namespace Dnfeitosa.Enums
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
-            return other._ordinal == _ordinal && Equals(other._name, _name);
+            return other.Ordinal == Ordinal && Equals(other.Name, Name);
         }
 
         public override bool Equals(object obj)

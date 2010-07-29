@@ -13,7 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Tests", "Dn
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project Items", "Project Items", "{1620E8D9-3D10-400E-BC62-3FF92C16C034}"
 	ProjectSection(SolutionItems) = preProject
-		CHANGELOG = CHANGELOG
 		LICENSE = LICENSE
 		README.rdoc = README.rdoc
 	EndProjectSection
