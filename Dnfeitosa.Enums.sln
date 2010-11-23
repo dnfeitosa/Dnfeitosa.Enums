@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Frameworks.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Test", "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Test\Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Test.csproj", "{ACE353D3-542E-442F-A000-96829F73691B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.Test", "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.Test\Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.Test.csproj", "{9C8D9060-2280-418B-B29D-2C31A8F83D81}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2", "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2\Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.csproj", "{6987DE0C-8583-43F3-8CE9-BE8F34DBA9ED}"
 EndProject
 Global
