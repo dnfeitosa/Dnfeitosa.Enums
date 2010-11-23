@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Linq;
-using System.Reflection;
 using System.Web.Mvc;
+using Dnfeitosa.Enums.Helpers;
 
 namespace Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Binding
 {
@@ -19,26 +18,30 @@ namespace Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Binding
 
         public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {
-            if (!IsEnumType(bindingContext.ModelType))
+            var modelType = bindingContext.ModelType;
+            if (!modelType.IsAnEnumType())
                 return _defaultBinder.BindModel(controllerContext, bindingContext);
+
+            if (!bindingContext.ValueProvider.ContainsKey(bindingContext.ModelName))
+            {
+                return null;
+            }
 
             var enumName = bindingContext.ValueProvider[bindingContext.ModelName].AttemptedValue;
             if (enumName == null || enumName.Trim() == "")
                 return null;
 
-            var @enum = bindingContext.ModelType
-                .GetFields(BindingFlags.Static | BindingFlags.Public)
-                .Where(f => f.Name == enumName)
-                .FirstOrDefault();
+            var enumField = modelType
+                .GetFieldNamed(enumName);
 
-            return @enum == null ? null : @enum.GetValue(null);
+            return enumField == null
+                ? null
+                : enumField.GetValue(null);
         }
 
-        private bool IsEnumType(Type type)
+        public static void Setup()
         {
-            return type
-                .GetInterfaces()
-                .Any(iface => iface == typeof(IEnum));
+            new EnumModelBinder(ModelBinders.Binders);
         }
     }
 }

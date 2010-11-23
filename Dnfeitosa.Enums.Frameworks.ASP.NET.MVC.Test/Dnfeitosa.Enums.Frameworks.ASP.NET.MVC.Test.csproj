@@ -1,14 +1,14 @@
-﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{71860709-D6A1-44DB-86FE-BE7F2BF5A5AC}</ProjectGuid>
+    <ProjectGuid>{ACE353D3-542E-442F-A000-96829F73691B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dnfeitosa.Enums.Tests</RootNamespace>
-    <AssemblyName>Dnfeitosa.Enums.Tests</AssemblyName>
+    <RootNamespace>Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Test</RootNamespace>
+    <AssemblyName>Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Test</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -41,26 +41,22 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Web.Abstractions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fixtures\AnotherFixture.cs" />
-    <Compile Include="Helpers\TypeExtensionTest.cs" />
-    <Compile Include="MockableTest.cs" />
-    <Compile Include="XmlSerializer.cs" />
-    <Compile Include="EnumTest.cs" />
-    <Compile Include="Fixtures\EnumFixture.cs" />
-    <Compile Include="Fixtures\Language.cs" />
-    <Compile Include="Fixtures\XmlFixture.cs" />
+    <Compile Include="EnumModelBinderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SerializationTest.cs" />
-    <Compile Include="XmlSerializationTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Dnfeitosa.Enums.Frameworks.ASP.NET.MVC\Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.csproj">
+      <Project>{A05CAC4E-9663-44E7-8545-963512AF6E46}</Project>
+      <Name>Dnfeitosa.Enums.Frameworks.ASP.NET.MVC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dnfeitosa.Enums.Tests\Dnfeitosa.Enums.Tests.csproj">
+      <Project>{71860709-D6A1-44DB-86FE-BE7F2BF5A5AC}</Project>
+      <Name>Dnfeitosa.Enums.Tests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dnfeitosa.Enums\Dnfeitosa.Enums.csproj">
       <Project>{08DA731A-96C3-4F0C-B3DE-DDEB0CD4B478}</Project>
       <Name>Dnfeitosa.Enums</Name>

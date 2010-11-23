@@ -1,16 +1,15 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Dnfeitosa.Enums")]
+[assembly: AssemblyTitle("Dnfeitosa.Enums.Frameworks.ASP.NET.MVC")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Diego Feitosa")]
-[assembly: AssemblyProduct("Dnfeitosa.Enums")]
-[assembly: AssemblyCopyright("Copyright ©  2009")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("Dnfeitosa.Enums.Frameworks.ASP.NET.MVC")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d076c92b-cd87-4da1-961c-2c76279da104")]
+[assembly: Guid("f59721e4-e336-441d-93e4-5535ceff200b")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,15 +31,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.4.2.0")]
-[assembly: AssemblyFileVersion("1.4.2.0")]
-
-// Framework-specif projects
-[assembly: InternalsVisibleTo("Dnfeitosa.Enums.Frameworks.ASP.NET.MVC")]
-[assembly: InternalsVisibleTo("Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2")]
-
-// Test projects
-[assembly: InternalsVisibleTo("Dnfeitosa.Enums.Tests")]
-[assembly: InternalsVisibleTo("Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Test")]
-[assembly: InternalsVisibleTo("Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.Test")]
-
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
