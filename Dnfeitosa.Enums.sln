@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Frameworks.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2", "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2\Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.csproj", "{6987DE0C-8583-43F3-8CE9-BE8F34DBA9ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.Test", "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.Test\Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.Test.csproj", "{9C8D9060-2280-418B-B29D-2C31A8F83D81}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Dnfeitosa.Enums.vsmdi
@@ -52,6 +54,10 @@ Global
 		{6987DE0C-8583-43F3-8CE9-BE8F34DBA9ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6987DE0C-8583-43F3-8CE9-BE8F34DBA9ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6987DE0C-8583-43F3-8CE9-BE8F34DBA9ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C8D9060-2280-418B-B29D-2C31A8F83D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C8D9060-2280-418B-B29D-2C31A8F83D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C8D9060-2280-418B-B29D-2C31A8F83D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C8D9060-2280-418B-B29D-2C31A8F83D81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
