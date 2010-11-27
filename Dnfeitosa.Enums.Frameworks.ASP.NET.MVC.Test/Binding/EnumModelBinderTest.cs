@@ -5,7 +5,7 @@ using Dnfeitosa.Enums.Tests.Fixtures;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Test
+namespace Dnfeitosa.Enums.Frameworks.ASP.NET.MVC.Test.Binding
 {
     [TestClass]
     public class EnumModelBinderTest
