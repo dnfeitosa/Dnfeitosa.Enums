@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Frameworks.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.Test", "Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.Test\Dnfeitosa.Enums.Frameworks.ASP.NET.MVC2.Test.csproj", "{9C8D9060-2280-418B-B29D-2C31A8F83D81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Frameworks.NHibernate2", "Dnfeitosa.Enums.Frameworks.NHibernate2\Dnfeitosa.Enums.Frameworks.NHibernate2.csproj", "{9CD15BA5-3858-4BBD-A8CD-9BC0E1757826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnfeitosa.Enums.Frameworks.NHibernate2.Test", "Dnfeitosa.Enums.Frameworks.NHibernate2.Test\Dnfeitosa.Enums.Frameworks.NHibernate2.Test.csproj", "{FFD6D770-8C75-48E0-84D5-C72069F34ED5}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Dnfeitosa.Enums.vsmdi
@@ -58,6 +62,14 @@ Global
 		{9C8D9060-2280-418B-B29D-2C31A8F83D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C8D9060-2280-418B-B29D-2C31A8F83D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C8D9060-2280-418B-B29D-2C31A8F83D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD15BA5-3858-4BBD-A8CD-9BC0E1757826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD15BA5-3858-4BBD-A8CD-9BC0E1757826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD15BA5-3858-4BBD-A8CD-9BC0E1757826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD15BA5-3858-4BBD-A8CD-9BC0E1757826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFD6D770-8C75-48E0-84D5-C72069F34ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFD6D770-8C75-48E0-84D5-C72069F34ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFD6D770-8C75-48E0-84D5-C72069F34ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFD6D770-8C75-48E0-84D5-C72069F34ED5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
