@@ -19,11 +19,7 @@ namespace Dnfeitosa.Enums.Helpers
             {
                 return null;
             }
-
-            return type
-                .GetFields(BindingFlags.Static | BindingFlags.Public)
-                .Where(f => f.Name == name)
-                .FirstOrDefault();
+            return type.GetField(name, BindingFlags.Static | BindingFlags.Public);
         }
     }
 }

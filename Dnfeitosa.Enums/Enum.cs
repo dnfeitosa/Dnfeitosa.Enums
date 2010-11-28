@@ -94,10 +94,9 @@ namespace Dnfeitosa.Enums
 
         public static T Where(Func<T, bool> predicate)
         {
-            foreach (var value in Values())
+            foreach (var value in Values().Where(predicate.Invoke))
             {
-                if (predicate.Invoke(value))
-                    return value;
+                return value;
             }
             return default(T);
         }
