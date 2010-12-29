@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.Serialization;
 
 namespace Dnfeitosa.Enums.Tests.Fixtures
@@ -22,6 +23,20 @@ namespace Dnfeitosa.Enums.Tests.Fixtures
         protected Language(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
+        }
+
+        private Language()
+        {
+        }
+
+        public override string ToXml()
+        {
+            return IetfTag;
+        }
+
+        public override Language FromXml(string value)
+        {
+            return Values().Where(e => e.IetfTag == value).FirstOrDefault();
         }
     }
 }

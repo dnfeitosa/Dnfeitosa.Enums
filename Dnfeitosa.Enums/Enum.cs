@@ -140,15 +140,25 @@ namespace Dnfeitosa.Enums
 
         public void ReadXml(XmlReader reader)
         {
-            var content = reader.ReadElementContentAsString();
-            var @enum = ValueOf(content);
+            var name = reader.ReadElementContentAsString();
+            var @enum = FromXml(name);
 
             new PropertiesCopier().Copy(@enum, this);
         }
 
         public void WriteXml(XmlWriter writer)
         {
-            writer.WriteValue(Name);
+            writer.WriteValue(ToXml());
+        }
+
+        public virtual string ToXml()
+        {
+            return Name;
+        }
+
+        public virtual T FromXml(string value)
+        {
+            return ValueOf(value);
         }
     }
 }

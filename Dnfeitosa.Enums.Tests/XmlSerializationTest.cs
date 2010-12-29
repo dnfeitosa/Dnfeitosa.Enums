@@ -23,9 +23,9 @@ namespace Dnfeitosa.Enums.Tests
                                   SomeValue = "Test"
                               };
 
-            var @xml = _xmlSerializer.Serialize(@object);
+            var xml = _xmlSerializer.Serialize(@object);
 
-            Assert.IsTrue(@xml.Contains("<SomeEnum>Value2</SomeEnum>"));
+            Assert.IsTrue(xml.Contains("<SomeEnum>Value2</SomeEnum>"));
         }
 
         [TestMethod]
@@ -35,6 +35,28 @@ namespace Dnfeitosa.Enums.Tests
             var @object = _xmlSerializer.Deserialize<XmlFixture>(xml);
 
             Assert.IsTrue(@object.SomeEnum == EnumFixture.Value1);
+        }
+
+        [TestMethod]
+        public void ShouldProperlySerializeToXmlUsingACustomProperty()
+        {
+            var @object = new XmlFixture
+                                 {
+                                     Language = Fixtures.Language.PtBr
+                                 };
+
+            var xml = _xmlSerializer.Serialize(@object);
+
+            Assert.IsTrue(xml.Contains("<Language>pt-BR</Language>"));
+        }
+
+        [TestMethod]
+        public void ShouldProperlyDeserializeFromXmlUsingACustomProperty()
+        {
+            const string xml = @"<?xml version='1.0' ?><XmlFixture><Language>pt-BR</Language></XmlFixture>";
+            var @object = _xmlSerializer.Deserialize<XmlFixture>(xml);
+
+            Assert.IsTrue(@object.Language == Fixtures.Language.PtBr);
         }
     }
 }
