@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Types\CustomPropertyEnumType.cs" />
     <Compile Include="Types\EnumType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
