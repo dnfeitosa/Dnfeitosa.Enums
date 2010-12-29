@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\fast-sal\Libraries\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate, Version=2.1.0.4000, Culture=neutral, PublicKeyToken=ab7c72e8dd6f2b88, processorArchitecture=MSIL">
       <HintPath>C:\Users\Diego\Desktop\Decompiled\NHibernate.dll</HintPath>
     </Reference>
