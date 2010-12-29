@@ -33,7 +33,6 @@ namespace Dnfeitosa.Enums.Tests
         {
             const string xml = @"<?xml version='1.0' ?><XmlFixture><SomeEnum>Value1</SomeEnum><SomeValue>Test</SomeValue></XmlFixture>";
             var @object = _xmlSerializer.Deserialize<XmlFixture>(xml);
-            _xmlSerializer.Deserialize<XmlFixture>(xml);
 
             Assert.IsTrue(@object.SomeEnum == EnumFixture.Value1);
         }
