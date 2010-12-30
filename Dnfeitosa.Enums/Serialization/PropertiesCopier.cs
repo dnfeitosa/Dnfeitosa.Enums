@@ -9,7 +9,8 @@
             foreach (var property in properties)
             {
                 var value = property.GetValue(from, null);
-                property.SetValue(to, value, null);
+                if (property.CanWrite)
+                    property.SetValue(to, value, null);
             }
         }
     }
