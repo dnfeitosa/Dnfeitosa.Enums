@@ -1,3 +1,6 @@
+2010-12-30 v1.7.1
+	* Fixed xml deserialization for enums with read-only fields
+----------------------------------------
 2010-12-29 v1.7.0
 	* Added support for xml serialization customization
 ----------------------------------------
